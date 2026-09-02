@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://www.kohav-d.co.il">
+<link rel="preload" as="image" href="img/hero-l.webp" media="(orientation: landscape)" fetchpriority="high" crossorigin="anonymous">
+<link rel="preload" as="image" href="img/hero-p.webp" media="(orientation: portrait)" fetchpriority="high" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LodgingBusiness","name":"סוויטות כוכב הדרום","legalName":"סוויטות כוכב הדרום בע״מ","alternateName":"Kohav HaDarom Eilat Suites","url":"https://www.kohav-d.co.il","telephone":"+972-52-372-4764","email":"info@kohav-d.co.il","image":"https://www.kohav-d.co.il/wp-content/uploads/2026/06/kochav-hamidbar-10.jpg","address":{"@type":"PostalAddress","addressLocality":"אילת","addressCountry":"IL"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"156"},"sameAs":["https://instagram.com/star_suits1"]}
@@ -101,6 +103,7 @@ header.site.clear .hdr-book .btn:hover{background:#fff;color:var(--ink)}
 /* ---------- cinematic hero ---------- */
 .hero{position:relative;height:92vh;height:92svh;min-height:560px;overflow:hidden;background:#171612}
 .hero .layer{position:absolute;inset:-1px 0;will-change:transform}
+.hero .layer picture{display:block;width:100%;height:100%}
 .hero .layer img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05);animation:kbz 17s linear both}
 @keyframes kbz{from{transform:scale(1)}to{transform:scale(1.22)}}
 .hero-shade{position:absolute;inset:0;background:radial-gradient(115% 90% at 50% 44%,transparent 38%,rgba(20,19,16,.5) 100%),linear-gradient(to bottom,rgba(20,19,16,.5),rgba(20,19,16,.16) 30%,rgba(20,19,16,.24) 60%,rgba(20,19,16,.62))}
@@ -790,9 +793,10 @@ const PLACES=[
   loc:'המלון ממוקם במרכז העיר אילת, נקודת פתיחה מושלמת לחופשה עירונית: קרוב לחופים, לטיילת ולמתחמי הקניות.',locFacts:['מרכז העיר','קרוב לחופים','מתאים לקבוצות'],
   gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732700/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/ffebbd6d.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732701/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/fd12e34b.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732700/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/2ad53213.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732701/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/c470e3e1.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1785732703/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/f6da9286.jpg']}
 ];
-const WOW1='https://upload.wikimedia.org/wikipedia/commons/c/c1/Eilat_Coral_Reserve.jpg';
-const WOW2='https://upload.wikimedia.org/wikipedia/commons/4/42/Eilat_at_night.jpg';
-const WOW3='https://upload.wikimedia.org/wikipedia/commons/a/a6/Eilat_Coastline_At_Night.jpg';
+const WOW1='img/hero-l.webp'; /* 2560px, מקודד מ-Eilat_Coral_Reserve.jpg (Wikimedia Commons, CC BY) — היה 4.75MB */
+const WOW1P='img/hero-p.webp'; /* חיתוך אנכי 1080px לנייד */
+const WOW2='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Eilat_at_night.jpg/1920px-Eilat_at_night.jpg';
+const WOW3='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Eilat_Coastline_At_Night.jpg/1920px-Eilat_Coastline_At_Night.jpg';
 const HERO=[WOW1,WOW2,U+'2026/06/kochav-halayla-02.jpg',U+'2026/06/kochav-hamidbar-05.jpg',U+'2026/06/kochav-hazricha-22.jpg'];
 const ABOUT_IMG=U+'2026/06/kochav-hamidbar-07.jpg';
 const QBAND1=PLACES[1].cover; /* ג׳קוזי הגג מול המפרץ */
@@ -891,7 +895,7 @@ function tIcon(k){
 const views={};
 views.home=function(){
   return '<section class="hero" id="hero-strip" aria-label="כוכב הדרום, אירוח בוטיק באילת">'
-   +'<div class="layer" id="hero-layer" aria-hidden="true"><img src="'+WOW1+'" alt="" fetchpriority="high"></div>'
+   +'<div class="layer" id="hero-layer" aria-hidden="true"><picture><source media="(orientation: portrait)" srcset="'+WOW1P+'"><img src="'+WOW1+'" alt="" fetchpriority="high" decoding="async" crossorigin="anonymous"></picture></div>'
    +'<div class="hero-shade" aria-hidden="true"></div>'
    +'<div class="hero-c" id="hero-c">'
    +'<span class="hstar hi hi-1" aria-hidden="true">'+starSvg+'</span>'
