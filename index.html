@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>כוכב הדרום · סוויטות ובתי נופש באילת | הזמנה ישירה</title>
-<meta name="description" content="קולקציה של שבעה נכסי אירוח יוקרתיים באילת: וילה עם בריכה פרטית, סוויטות עם ג׳קוזי ומלון בוטיק. הזמנה ישירה, בלי עמלות.">
-<meta property="og:title" content="כוכב הדרום · סוויטות ובתי נופש באילת">
-<meta property="og:description" content="קולקציה של נכסי אירוח יוקרתיים על חוף הים האדום. הזמנה ישירה, בלי עמלות.">
+<title>לומי אילת · Lumi Eilat | קולקציה פרטית של נכסי יוקרה</title>
+<meta name="description" content="לומי אילת: קולקציה פרטית של שבעה נכסי יוקרה באילת. וילה עם בריכה פרטית, סוויטות עם ג׳קוזי ומלון בוטיק. הזמנה ישירה, בלי עמלות.">
+<meta property="og:title" content="לומי אילת · Lumi Eilat | קולקציה פרטית של נכסי יוקרה באילת">
+<meta property="og:description" content="לומי אילת: קולקציה פרטית של נכסי יוקרה על חוף הים האדום. הזמנה ישירה, בלי עמלות.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://www.kohav-d.co.il/wp-content/uploads/2026/06/kochav-hamidbar-10.jpg">
 <meta property="og:locale" content="he_IL">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1916'/%3E%3Cpath d='M32 12l5.8 13.4 14.2 1.3-10.8 9.6 3.2 14.2L32 43l-12.4 7.5 3.2-14.2L12 26.7l14.2-1.3z' fill='%23B08A46'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1916'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23B08A46' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23B08A46'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://www.kohav-d.co.il">
@@ -18,7 +18,7 @@
 <link rel="preload" as="image" href="img/hero-p.webp" media="(orientation: portrait)" fetchpriority="high" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LodgingBusiness","name":"סוויטות כוכב הדרום","legalName":"סוויטות כוכב הדרום בע״מ","alternateName":"Kohav HaDarom Eilat Suites","url":"https://www.kohav-d.co.il","telephone":"+972-52-372-4764","email":"info@kohav-d.co.il","image":"https://www.kohav-d.co.il/wp-content/uploads/2026/06/kochav-hamidbar-10.jpg","address":{"@type":"PostalAddress","addressLocality":"אילת","addressCountry":"IL"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"156"},"sameAs":["https://instagram.com/star_suits1"]}
+{"@context":"https://schema.org","@type":"LodgingBusiness","name":"לומי אילת · Lumi Eilat","legalName":"סוויטות כוכב הדרום בע״מ","alternateName":"Lumi Eilat Private Collection","url":"https://www.kohav-d.co.il","telephone":"+972-52-372-4764","email":"info@kohav-d.co.il","image":"https://www.kohav-d.co.il/wp-content/uploads/2026/06/kochav-hamidbar-10.jpg","address":{"@type":"PostalAddress","addressLocality":"אילת","addressCountry":"IL"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"156"},"sameAs":["https://instagram.com/star_suits1"]}
 </script>
 <style>
 :root{
@@ -289,8 +289,6 @@ html[data-motion="off"] .hero .layer img{animation:none}
 ::view-transition-old(phero),::view-transition-new(phero){height:100%;object-fit:cover}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.5s}
 /* webgl layers */
-#hero-gl{position:absolute;inset:0;width:100%;height:100%}
-.hero .layer.gl-on img{visibility:hidden}
 .rel .rmedia{position:relative}
 /* scroll cinema */
 .scene{position:relative}
@@ -341,6 +339,17 @@ html[data-motion="off"] .hero .layer img{animation:none}
 .db-f input{border:0;border-bottom:1px solid var(--hair);background:transparent;font-family:inherit;font-size:14.5px;font-weight:600;color:var(--ink);padding:3px 2px;width:132px}
 .db-f input:focus{outline:none;border-color:var(--ink)}
 @media (max-width:700px){.datebar{gap:12px;padding:14px 16px}.db-t{width:100%;text-align:center}}
+/* מנוע הזמנות בראש הדף */
+.bookbar{position:relative;z-index:5;display:grid;grid-template-columns:1.35fr 1fr 1fr auto;align-items:end;gap:clamp(14px,2vw,28px);width:min(1040px,calc(100% - 2*var(--pad)));margin:-46px auto 0;padding:20px clamp(18px,2.6vw,34px) 22px;background:#fff;border:1px solid var(--hair);box-shadow:0 30px 60px -30px rgba(26,25,22,.35)}
+.bb-f{display:flex;flex-direction:column;gap:7px;min-width:0}
+.bb-f label{font-size:10.5px;font-weight:700;letter-spacing:.22em;color:var(--gray)}
+.bb-f input,.bb-f select{border:0;border-bottom:1px solid var(--hair);background:transparent;font-family:inherit;font-size:15px;font-weight:600;color:var(--ink);padding:6px 2px;width:100%;border-radius:0;-webkit-appearance:none;appearance:none}
+.bb-f select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231A1916' stroke-width='1.4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:left 4px center;padding-inline-end:20px;cursor:pointer}
+.bb-f input:focus,.bb-f select:focus{outline:none;border-color:var(--ink)}
+.bookbar .btn{white-space:nowrap;padding-inline:28px}
+@media (max-width:860px){.bookbar{grid-template-columns:1fr 1fr;margin-top:-30px;gap:14px}.bb-p{grid-column:1/-1}.bookbar .btn{grid-column:1/-1;margin-top:4px}}
+@media (max-width:700px){.hero{height:62svh;min-height:420px}}
+@media (max-width:700px){.brand-en{letter-spacing:.26em;text-indent:.26em;font-size:8.5px}}
 /* trust strip + moods accordion */
 .trust{border-block:1px solid var(--hair);background:var(--bg)}
 .trust-g{display:grid;grid-template-columns:repeat(3,1fr)}
@@ -485,7 +494,8 @@ footer.site{border-top:1px solid var(--hair);margin-top:clamp(70px,9vw,130px);pa
 #intro .pan{position:absolute;left:0;right:0;height:50.5%;background:var(--bg);transition:transform .95s cubic-bezier(0.77,0,0.175,1)}
 #intro .pt{top:0}#intro .pb{bottom:0}
 #intro .ic{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:opacity .35s ease}
-#intro svg path{stroke:var(--gold);stroke-width:1.5;fill:none;stroke-dasharray:300;stroke-dashoffset:300;animation:idraw 1.25s var(--eo) .1s forwards}
+#intro svg path{stroke:var(--gold);stroke-width:1.5;fill:none;stroke-dasharray:140;stroke-dashoffset:140;animation:idraw 1.25s var(--eo) .1s forwards}
+#intro svg circle{fill:var(--gold);animation:introIn .8s var(--eo) .7s both}
 #intro .iname{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,32px);letter-spacing:.32em;text-indent:.32em;color:var(--ink);animation:introIn 1s var(--eo) .25s both}
 #intro .icount{font-family:var(--serif);font-size:13px;letter-spacing:.34em;color:var(--gray);font-variant-numeric:tabular-nums;animation:introIn 1s var(--eo) .4s both;direction:ltr}
 @property --n{syntax:"<integer>";initial-value:0;inherits:false}
@@ -506,9 +516,6 @@ html[data-motion="off"] #intro{display:none}
 .odo .ocol i{font-style:normal;height:1em;display:block}
 .odo .os{display:inline-block}
 /* gold cursor glow */
-#glow{position:fixed;left:0;top:0;z-index:60;width:360px;height:360px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(214,178,112,.26),transparent 62%);mix-blend-mode:screen;opacity:0;transition:opacity .45s ease;will-change:transform}
-body.glow-on #glow{opacity:1}
-@media (hover:none){#glow{display:none}}
 .btn{will-change:transform}
 
 /* הפיכת הקלפים לחלונות + פתיחת תריסים + כניסה פנימה */
@@ -637,21 +644,20 @@ html[data-contrast="on"] .hero-shade,html[data-contrast="on"] .qshade{background
 <div id="intro" aria-hidden="true">
   <i class="pan pt"></i><i class="pan pb"></i>
   <div class="ic">
-    <svg width="46" height="46" viewBox="0 0 64 64"><path d="M32 6l7.6 17.6 19.1 1.7-14.5 12.7 4.3 18.7L32 46.9 15.5 56.7l4.3-18.7L5.3 25.3l19.1-1.7z"/></svg>
-    <span class="iname">כוכב הדרום</span>
+    <svg width="46" height="46" viewBox="0 0 64 64"><path d="M32 10a22 22 0 1 1 0 44a22 22 0 1 1 0-44"/><circle cx="32" cy="32" r="5.5"/></svg>
+    <span class="iname">LUMI</span>
     <span class="icount"><span id="icnt"></span>%</span>
   </div>
 </div>
-<div id="glow" aria-hidden="true"></div>
 
 <header class="site" id="hdr">
   <div class="bar">
     <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="תפריט">
       <span class="mlines" aria-hidden="true"><span></span><span></span></span><span class="mtxt">תפריט</span>
     </button>
-    <a class="brand" href="#/" aria-label="כוכב הדרום, לעמוד הבית">
-      <span class="brand-name">כוכב הדרום</span>
-      <span class="brand-en">EILAT&nbsp;SUITES</span>
+    <a class="brand" href="#/" aria-label="לומי אילת, לעמוד הבית">
+      <span class="brand-name">LUMI</span>
+      <span class="brand-en">EILAT&nbsp;·&nbsp;PRIVATE&nbsp;COLLECTION</span>
     </a>
     <span class="hdr-book"><a class="btn btn-sm" data-bookid="" href="https://h29dcb831af.sxivo.com" target="_blank" rel="noopener">הזמנה</a></span>
   </div>
@@ -669,9 +675,9 @@ html[data-contrast="on"] .hero-shade,html[data-contrast="on"] .qshade{background
 
 <footer class="site">
   <div class="wrap">
-    <a class="brand f-logo" href="#/" aria-label="כוכב הדרום, לעמוד הבית">
-      <span class="brand-name">כוכב הדרום</span>
-      <span class="brand-en">EILAT&nbsp;SUITES</span>
+    <a class="brand f-logo" href="#/" aria-label="לומי אילת, לעמוד הבית">
+      <span class="brand-name">LUMI</span>
+      <span class="brand-en">EILAT&nbsp;·&nbsp;PRIVATE&nbsp;COLLECTION</span>
     </a>
     <nav class="f-nav" aria-label="הנכסים" id="f-places"></nav>
     <div class="f-contact">
@@ -685,7 +691,7 @@ html[data-contrast="on"] .hero-shade,html[data-contrast="on"] .qshade{background
       <a href="#/terms">תנאי שימוש</a>
       <a href="#/privacy">מדיניות פרטיות</a>
     </nav>
-    <p class="f-copy">© 2026 סוויטות כוכב הדרום בע״מ · אילת, מדינת ישראל · הזמנה ישירה, בלי עמלות פלטפורמה</p>
+    <p class="f-copy">© 2026 לומי אילת · Lumi Eilat · מופעל על ידי סוויטות כוכב הדרום בע״מ · אילת, מדינת ישראל</p>
     <p class="f-copy" style="font-size:11px;opacity:.75">צילומי נוף: Yonatan Dodin · Gal Gubesi · Wikimedia Commons (CC BY / CC BY-SA)</p>
   </div>
 </footer>
@@ -752,8 +758,8 @@ const PLACES=[
   amenities:['בריכת שחייה פרטית','3 חדרי שינה · 2 חדרי רחצה','גינה, טרסה ופינת ברביקיו','מטבח מאובזר מלא','מכונת כביסה','מיזוג בכל חדר','Wi-Fi מהיר','נגיש לכיסא גלגלים'],
   loc:'הוילה שוכנת בשכונת ראמים השקטה של אילת: פרטיות מלאה, בלי שכנים, ונסיעה קצרה מהחוף, מהטיילת וממוקדי הבילוי של העיר.',locFacts:['שכונת ראמים','נסיעה קצרה מהחוף','דקות ממרכז העיר'],
   gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/v1784654383/pms/properties/57fba550-c164-4128-bc42-b7076f588065/adb41fc5.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654384/pms/properties/57fba550-c164-4128-bc42-b7076f588065/02f87d28.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654392/pms/properties/57fba550-c164-4128-bc42-b7076f588065/fa5f8da9.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654393/pms/properties/57fba550-c164-4128-bc42-b7076f588065/cb8a23f2.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654385/pms/properties/57fba550-c164-4128-bc42-b7076f588065/5c4df035.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654386/pms/properties/57fba550-c164-4128-bc42-b7076f588065/13346247.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654388/pms/properties/57fba550-c164-4128-bc42-b7076f588065/ad1431e3.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654395/pms/properties/57fba550-c164-4128-bc42-b7076f588065/2f42a474.jpg']},
- {id:'hazricha',name:'כוכב הזריחה',nameEn:'SUNRISE STAR',tag:'סוויטה זוגית · קומת גג',kind:'couple',pid:'c1f1f3f4-b435-4276-9f2b-c7829c085c76',price:'₪950',priceNote:'סופי שבוע החל מ־₪1,200',
-  cover:IMG+'hazricha/01.webp',alt:'הג׳קוזי הפרטי במרפסת הגג של כוכב הזריחה מול מפרץ אילת',
+ {id:'hazricha',name:'כוכב 18',nameEn:'KOCHAV 18',tag:'סוויטה זוגית · קומת גג',kind:'couple',pid:'c1f1f3f4-b435-4276-9f2b-c7829c085c76',price:'₪950',priceNote:'סופי שבוע החל מ־₪1,200',
+  cover:IMG+'hazricha/01.webp',alt:'הג׳קוזי הפרטי במרפסת הגג של כוכב 18 מול מפרץ אילת',
   short:'סוויטה זוגית בקומת גג עם נוף פנורמי של הים והעיר אילת. ג׳קוזי פרטי במרפסת, מטבח חוץ מאובזר ובריכה חיצונית.',
   long:'בקומת הגג, עם המפרץ והעיר פרושים מתחת: סוויטה זוגית עם מרפסת פרטית וג׳קוזי משלכם, מטבח חוץ מאובזר עם מקרר גדול ומקפיא, ובריכה חיצונית עם מיטות שיזוף. בפנים: מיטה זוגית, ספה נפתחת למיטה, טלוויזיה חכמה עם אפליקציות, Wi-Fi מהיר ומיזוג. הכניסה לסוויטה פרטית.',
   meta:'סוויטה זוגית · קומת גג · עד 3 אורחים · ג׳קוזי פרטי · נוף פנורמי',
@@ -762,16 +768,16 @@ const PLACES=[
   notes:['אסור להבעיר אש ביחידה ובמרפסת, כולל מנגל.','הגישה ליחידה עם מדרגות.'],
   loc:'הסוויטה יושבת בקומת הגג והמרפסת פונה אל המפרץ: הים, ההרים האדומים והעיר אילת בתמונה אחת, מהבוקר ועד אורות הלילה.',locFacts:['קומת גג','נוף פנורמי לים ולעיר','מרפסת פרטית עם ג׳קוזי'],
   gallery:[IMG+'hazricha/01.webp',IMG+'hazricha/02.webp',IMG+'hazricha/03.webp',IMG+'hazricha/04.webp',IMG+'hazricha/05.webp',IMG+'hazricha/06.webp',IMG+'hazricha/07.webp','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/b6690fd9.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654477/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/98c3bd51.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/59fd709a.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654476/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/30dc1d46.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654482/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/6146ade5.jpg']},
- {id:'hayam',name:'כוכב הים',nameEn:'SEA STAR',tag:'דירות נוף לים',kind:'family',pid:'80eda529-c8eb-45b6-bc5b-e816bbbd163b',price:'₪1,500',
-  cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344000/pms/properties/80eda529-c8eb-45b6-bc5b-e816bbbd163b/dcc51076.jpg',alt:'בניין כוכב הים בשדרות התמרים',
+ {id:'hayam',name:'שדרות התמרים 22',nameEn:'HATMARIM 22',tag:'דירות נוף לים',kind:'family',pid:'80eda529-c8eb-45b6-bc5b-e816bbbd163b',price:'₪1,500',
+  cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344000/pms/properties/80eda529-c8eb-45b6-bc5b-e816bbbd163b/dcc51076.jpg',alt:'הבניין בשדרות התמרים 22',
   short:'ארבע דירות מודרניות בשדרות התמרים, שלוש עם נוף ישיר לים, 8 דקות הליכה למרינה.',
-  long:'כוכב הים הוא הנכס העירוני שלנו: 4 דירות מודרניות בלב שדרות התמרים, השדרה היפה באילת. 3 מהדירות עם מרפסת ונוף לים, כולן במרחק הליכה של 8 דקות מהמרינה ו־15 דקות מהחוף. סופר, מסעדות וקפה, הכל ב־3 דקות.',
+  long:'שדרות התמרים 22 הוא הנכס העירוני שלנו: 4 דירות מודרניות בלב שדרות התמרים, השדרה היפה באילת. 3 מהדירות עם מרפסת ונוף לים, כולן במרחק הליכה של 8 דקות מהמרינה ו־15 דקות מהחוף. סופר, מסעדות וקפה, הכל ב־3 דקות.',
   meta:'4 דירות · 2–8 אורחים · 45–110 מ״ר · נוף לים',
   amenities:['1–3 חדרי שינה בכל דירה','מרפסת עם נוף לים','מטבח מלא + מדיח','מכונת כביסה','מיזוג','Wi-Fi מהיר','Smart TV','מתקני ברביקיו'],
   loc:'בלב שדרות התמרים, השדרה היפה באילת: 8 דקות הליכה למרינה, רבע שעה ברגל לחוף, וסופר, מסעדות ובתי קפה במרחק 3 דקות.',locFacts:['שדרות התמרים','8 דק׳ הליכה למרינה','3 דק׳ לסופר ומסעדות'],
   gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344000/pms/properties/80eda529-c8eb-45b6-bc5b-e816bbbd163b/dcc51076.jpg',U+'2026/06/kochav-hayam-06.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344015/pms/properties/80eda529-c8eb-45b6-bc5b-e816bbbd163b/9439c183.jpg',U+'2026/06/kochav-hayam-02.jpg']},
- {id:'hadarom',name:'כוכב הדרום',nameEn:'SOUTH STAR',tag:'סטודיוז זוגיים',kind:'couple',pid:'74fa7e1f-9a67-40ca-b4d4-23ced8d89167',price:'₪800',
-  cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344084/pms/properties/74fa7e1f-9a67-40ca-b4d4-23ced8d89167/51b7903c.jpg',alt:'בריכת הזרמים תחת הפרגולה במתחם כוכב הדרום',
+ {id:'hadarom',name:'סוויטות יעלים',nameEn:'YAELIM SUITES',tag:'סטודיוז זוגיים',kind:'couple',pid:'74fa7e1f-9a67-40ca-b4d4-23ced8d89167',price:'₪800',
+  cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344084/pms/properties/74fa7e1f-9a67-40ca-b4d4-23ced8d89167/51b7903c.jpg',alt:'בריכת הזרמים תחת הפרגולה בסוויטות יעלים',
   short:'ארבעה סטודיוז מחודשים של 40 מ״ר עם בריכה מקורה וג׳קוזי במתחם.',
   long:'ארבעה סטודיוז מחודשים בשדרות יעלים: נגיעה מהעיר, חמש דקות נסיעה מהים. כל סטודיו עם מטבחון מאובזר ומרפסת פרטית, ומעבר לדלת: בריכה מקורה, ג׳קוזי ופינות ישיבה לערבים של אילת.',
   meta:'4 סטודיוז · 40 מ״ר · בריכה מקורה · ג׳קוזי',
@@ -849,7 +855,7 @@ function refreshBookLinks(){$$('a[data-bookid]').forEach(a=>{a.href=bookHref(a.d
 /* ---------- templates ---------- */
 const chevR='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>';
 const chevL='<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
-const starSvg='<svg width="26" height="26" viewBox="0 0 64 64" fill="currentColor" aria-hidden="true"><path d="M32 8l6.5 15 16.5 1.5-12.5 11 3.7 16.5L32 43.5 17.8 52l3.7-16.5L9 24.5 25.5 23z"/></svg>';
+const starSvg='<svg width="26" height="26" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="32" cy="32" r="21"/><circle cx="32" cy="32" r="5.5" fill="currentColor" stroke="none"/></svg>'; /* סמל לומי: נקודת אור */
 function pcard(p,i){
   const wide=i===0;
   return '<article class="pcard'+(wide?' wide':'')+'" id="prop-'+p.id+'" data-rv style="--d:'+((i%2)*110)+'ms">'
@@ -903,20 +909,32 @@ function tIcon(k){
   if(k==='shield')return '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>';
   return '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/></svg>';
 }
+/* מנוע הזמנות בראש דף הבית: נכס + תאריכים → מערכת ההזמנות */
+function bookbar(){
+  return '<section class="bookbar" id="bookbar" aria-label="מנוע הזמנות">'
+   +'<div class="bb-f bb-p"><label for="bb-p">נכס</label><select id="bb-p">'
+   +'<option value="">כל הנכסים</option>'
+   +PLACES.map(p=>'<option value="'+p.id+'"'+(state.place===p.id?' selected':'')+'>'+p.name+'</option>').join('')+'</select></div>'
+   +'<div class="bb-f"><label for="bb-in">הגעה</label><input type="date" id="bb-in" data-bk="checkIn" value="'+state.checkIn+'"></div>'
+   +'<div class="bb-f"><label for="bb-out">יציאה</label><input type="date" id="bb-out" data-bk="checkOut" value="'+state.checkOut+'"></div>'
+   +'<a class="btn bb-btn" data-bookid="'+(state.place||'')+'" href="'+bookHref(state.place||'')+'" target="_blank" rel="noopener">בדקו זמינות</a>'
+   +'</section>';
+}
 const views={};
 views.home=function(){
-  return '<section class="hero" id="hero-strip" aria-label="כוכב הדרום, אירוח בוטיק באילת">'
+  return '<section class="hero" id="hero-strip" aria-label="לומי אילת, קולקציה פרטית של נכסי יוקרה באילת">'
    +'<div class="layer" id="hero-layer" aria-hidden="true"><picture><source media="(orientation: portrait)" srcset="'+WOW1P+'"><img src="'+WOW1+'" alt="" fetchpriority="high" decoding="async" crossorigin="anonymous"></picture></div>'
    +'<div class="hero-shade" aria-hidden="true"></div>'
    +'<div class="hero-c" id="hero-c">'
    +'<span class="hstar hi hi-1" aria-hidden="true">'+starSvg+'</span>'
-   +'<span class="hlabel hi hi-2">EILAT · ISRAEL</span>'
-   +'<h1 class="hi hi-3">כוכב הדרום</h1>'
+   +'<span class="hlabel hi hi-2">PRIVATE COLLECTION · EILAT</span>'
+   +'<h1 class="hi hi-3">LUMI</h1>'
    +'<div class="hrule hi hi-4" aria-hidden="true"></div>'
    +'<p class="hsub hi hi-5">קולקציה פרטית של נכסי יוקרה, בין ההרים האדומים לים</p>'
    +'</div>'
-   +'<div class="hero-cue" aria-hidden="true"><span>גללו</span><i></i></div>'
    +'</section>'
+
+  +bookbar()
 
   +'<section class="cfsec" aria-label="בחירת נכס">'
    +'<div class="center"><span class="label">THE COLLECTION</span>'
@@ -935,12 +953,6 @@ views.home=function(){
    +'<div class="cf-cap" id="cf-cap"></div>'
    +'<div class="cf-dots" id="cf-dots" aria-hidden="true"></div>'
    +'</div>'
-   +'<div class="datebar" aria-label="בדיקת זמינות מהירה">'
-   +'<span class="db-t">מתכננים תאריכים?</span>'
-   +'<div class="db-f"><label for="db-in">הגעה</label><input type="date" id="db-in" data-bk="checkIn" value="'+state.checkIn+'"></div>'
-   +'<div class="db-f"><label for="db-out">יציאה</label><input type="date" id="db-out" data-bk="checkOut" value="'+state.checkOut+'"></div>'
-   +'<a class="btn btn-sm" data-bookid="" href="'+BOOKING+'" target="_blank" rel="noopener">בדקו זמינות</a>'
-   +'</div>'
    +'</section>'
 
   +'<section class="trust" id="trust-sec" aria-label="למה להזמין ישירות"><div class="wrap trust-g">'
@@ -953,7 +965,7 @@ views.home=function(){
   +'<section class="scene cin" id="intro-sec" aria-labelledby="in-h"><div class="pin">'
    +[[U+'2026/06/kochav-halayla-02.jpg','מפרץ אילת'],[findPlace('hamidbar').cover,'הבריכה הפרטית בוילה']].map((L,i)=>
      '<div class="cin-l" data-cin="'+i+'"'+(i>0?' style="opacity:0"':'')+'><img src="'+L[0]+'" alt="'+L[1]+'" '+(i===0?'':'loading="lazy" ')+'decoding="async"><div class="cin-shade"></div></div>').join('')
-   +'<div class="cin-c"><span class="label" style="color:rgba(255,255,255,.85)">EILAT SUITES · אירוח יוקרה</span>'
+   +'<div class="cin-c"><span class="label" style="color:rgba(255,255,255,.85)">LUMI EILAT · אירוח יוקרה</span>'
    +'<h2 id="in-h" class="cin-h">'+'הכתובת הפרטית שלכם על הים האדום'.split(' ').map(w=>'<span class="cw">'+w+'</span>').join(' ')+'</h2>'
    +'<p class="cin-p">שבעה נכסים שנבחרו, עוצבו ומתוחזקים ללא פשרות. הזמנה ישירה, מחיר ישיר, שירות מסביב לשעון.</p>'
    +'<p class="cin-cta"><a class="btn btn-gl" href="#/places">לכל הנכסים</a></p>'
@@ -983,9 +995,9 @@ views.home=function(){
   +'<section class="band sec" id="story-sec" aria-labelledby="st-h"><div class="narrow center">'
    +'<span class="label" data-rv>OUR STORY</span>'
    +'<h2 id="st-h" class="h-big" data-rv style="--d:80ms;margin-top:16px">ממתחם אחד, לקולקציה שלמה</h2><div class="grule" data-rv></div>'
-   +'<p class="lead" data-rv style="--d:160ms;margin-top:28px">כוכב הדרום נולד ממתחם אחד באילת, מתוך אמונה פשוטה: אירוח טוב הוא קודם כל יחס. עם השנים גדלנו לקולקציה של שבעה נכסים — וילה עם בריכה פרטית, סוויטות זוגיות, מתחמים לכל המשפחה ומלון בוטיק — אבל הסטנדרט נשאר אחד.</p>'
+   +'<p class="lead" data-rv style="--d:160ms;margin-top:28px">לומי נולד ממתחם אחד באילת, מתוך אמונה פשוטה: אירוח טוב הוא קודם כל יחס. עם השנים גדלנו לקולקציה של שבעה נכסים — וילה עם בריכה פרטית, סוויטות זוגיות, מתחמים לכל המשפחה ומלון בוטיק — אבל הסטנדרט נשאר אחד.</p>'
    +'<p class="lead" data-rv style="--d:220ms;margin-top:16px">כל נכס עובר בידיים שלנו: העיצוב, האבזור, והניקיון עד הפרט האחרון. אנחנו כאן לאורך כל הדרך, מההזמנה ועד הצ׳ק־אאוט — כי אצלנו אתם לא מספר הזמנה. אתם אורחים.</p>'
-   +'<blockquote class="story-pull" data-rv style="--d:280ms"><span class="sp-star" aria-hidden="true">★</span>בריכה פרטית, חצר משלכם, וזריחה מעל הרי אדום</blockquote>'
+   +'<blockquote class="story-pull" data-rv style="--d:280ms"><span class="sp-star" aria-hidden="true">○</span>בריכה פרטית, חצר משלכם, וזריחה מעל הרי אדום</blockquote>'
    +'<p class="lead" data-rv style="--d:340ms">התחושה העוטפת של בית, עם האלגנטיות של חופשת בוטיק — לזוגות, למשפחות ולחברים.</p>'
    +'</div></section>'
 
@@ -1003,7 +1015,7 @@ views.home=function(){
    +'<p class="lead" data-rv style="--d:240ms">הזמנה ישירה מולנו היא תמיד המחיר הטוב ביותר: בלי עמלות, בלי תיווך, עם שירות אישי מהרגע הראשון.</p>'
    +'<div class="cta-btns" data-rv style="--d:300ms">'
    +'<a class="btn" data-bookid="" href="'+BOOKING+'" target="_blank" rel="noopener">להזמנה ישירה</a>'
-   +'<a class="btn btn-ghost" href="'+wa('שלום, התעניינתי בכוכב הדרום')+'" target="_blank" rel="noopener">וואטסאפ</a>'
+   +'<a class="btn btn-ghost" href="'+wa('שלום, התעניינתי בלומי אילת')+'" target="_blank" rel="noopener">וואטסאפ</a>'
    +'</div></section>';
 };
 
@@ -1103,7 +1115,7 @@ views.reviews=views.reviews=function(){
 
 views.contact=function(){
   const rows=[
-   {k:'וואטסאפ · הדרך המהירה',v:'052-372-4764',href:wa('שלום, התעניינתי בכוכב הדרום')},
+   {k:'וואטסאפ · הדרך המהירה',v:'052-372-4764',href:wa('שלום, התעניינתי בלומי אילת')},
    {k:'טלפון',v:'052-372-4764',href:'tel:+972523724764'},
    {k:'אימייל',v:'info@kohav-d.co.il',href:'mailto:info@kohav-d.co.il'},
    {k:'אינסטגרם',v:'@star_suits1',href:'https://instagram.com/star_suits1'},
@@ -1112,12 +1124,12 @@ views.contact=function(){
   return '<div class="wrap sec pagehead">'
    +'<div class="center"><span class="label">CONTACT</span>'
    +'<h1 class="h-big" style="margin-top:20px">שירות אישי, קו ישיר</h1>'
-   +'<p class="lead" style="max-width:52ch;margin:18px auto 0">צוות כוכב הדרום זמין לכם ישירות, בלי מוקדים ובלי המתנה. וואטסאפ הוא הדרך המהירה ביותר: מענה אנושי, בדרך כלל תוך דקות.</p></div>'
+   +'<p class="lead" style="max-width:52ch;margin:18px auto 0">צוות לומי זמין לכם ישירות, בלי מוקדים ובלי המתנה. וואטסאפ הוא הדרך המהירה ביותר: מענה אנושי, בדרך כלל תוך דקות.</p></div>'
    +'<div class="c-grid"><div>'
    +rows.map(r=>r.href
      ?'<div class="c-row"><span>'+r.k+'</span><a href="'+r.href+'"'+(r.href.indexOf('http')===0?' target="_blank" rel="noopener"':'')+'>'+(r.he?r.v:'<bdi dir="ltr">'+r.v+'</bdi>')+'</a></div>'
      :'<div class="c-row"><span>'+r.k+'</span><b style="font-size:16.5px">'+r.v+'</b></div>').join('')
-   +'<p style="margin-top:18px;color:var(--gray);font-size:13.5px">סוויטות כוכב הדרום בע״מ · אילת, מדינת ישראל</p>'
+   +'<p style="margin-top:18px;color:var(--gray);font-size:13.5px">לומי אילת · Lumi Eilat · מופעל על ידי סוויטות כוכב הדרום בע״מ · אילת, מדינת ישראל</p>'
    +'</div>'
    +'<form class="cform" id="c-form" novalidate><h2 style="font-size:24px;margin-bottom:18px">נחזור אליכם</h2>'
    +'<div class="ffield" id="ff-name"><label for="c-name">שם מלא</label><input id="c-name" name="name" autocomplete="name" required><p class="err" id="err-name">איך קוראים לכם? שם עם שתי אותיות לפחות.</p></div>'
@@ -1137,7 +1149,7 @@ function pageShell(title,html){
 }
 views.accessibility=function(){
   return pageShell('הצהרת נגישות',
-   '<p>סוויטות כוכב הדרום רואה חשיבות עליונה במתן שירות שוויוני לכלל האורחים, ובכללם אנשים עם מוגבלות. אתר זה נבנה בהתאם לתקן הישראלי (ת״י 5568) ולהנחיות WCAG 2.1 ברמת AA.</p>'
+   '<p>לומי אילת (סוויטות כוכב הדרום בע״מ) רואה חשיבות עליונה במתן שירות שוויוני לכלל האורחים, ובכללם אנשים עם מוגבלות. אתר זה נבנה בהתאם לתקן הישראלי (ת״י 5568) ולהנחיות WCAG 2.1 ברמת AA.</p>'
   +'<p>באתר: ניווט מלא במקלדת, תיאורי תמונה, ניגודיות מוגברת, אפשרות להגדלת טקסט, הדגשת קישורים ועצירת אנימציות דרך תפריט הנגישות הצף. וילת כוכב המדבר נגישה לכיסא גלגלים.</p>'
   +'<p>נתקלתם בקושי? נשמח לתקן. רכז הנגישות זמין בטלפון <a class="ulink" href="tel:+972523724764"><bdi dir="ltr">052-372-4764</bdi></a> או במייל <a class="ulink" href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a>.</p>'
   +'<p style="color:var(--gray);font-size:14px">ההצהרה עודכנה לאחרונה: אוגוסט 2026.</p>');
@@ -1145,16 +1157,16 @@ views.accessibility=function(){
 views.terms=function(){
   const H=t=>'<h2 style="font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--ink);margin-top:14px">'+t+'</h2>';
   return pageShell('תקנון ותנאי שימוש',
-   '<p style="color:var(--gray);font-size:14px">סוויטות כוכב הדרום בע״מ · אילת, ישראל · טלפון: <a class="ulink" href="tel:+972523724764"><bdi dir="ltr">052-372-4764</bdi></a> · <a class="ulink" href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a></p>'
+   '<p style="color:var(--gray);font-size:14px">לומי אילת · סוויטות כוכב הדרום בע״מ · אילת, ישראל · טלפון: <a class="ulink" href="tel:+972523724764"><bdi dir="ltr">052-372-4764</bdi></a> · <a class="ulink" href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a></p>'
   +'<p>השימוש באתר וביצוע הזמנה מהווים הסכמה לתקנון זה. ההזמנות מתבצעות במערכת הזמנות מאובטחת. המחירים באתר הם מחירי "החל מ־" ללילה; המחיר הקובע הוא המחיר המוצג בעת ביצוע ההזמנה.</p>'
   +H('אישור הזמנה ואספקת השירות')
-  +'<p>הזמנה נחשבת סגורה רק לאחר אישור בכתב מצד כוכב הדרום (בוואטסאפ או במייל) ולאחר תשלום מקדמה בסך 30% מסכום השהייה. יתרת התשלום נגבית ביום הצ׳ק־אין או בתיאום מראש. אישור ההזמנה, קוד הכניסה והוראות ההגעה נשלחים לאורח בוואטסאפ/מייל — אספקת השירות היא האירוח עצמו במועדים שנבחרו, ואינה כרוכה במשלוח פיזי.</p>'
+  +'<p>הזמנה נחשבת סגורה רק לאחר אישור בכתב מצד לומי אילת (בוואטסאפ או במייל) ולאחר תשלום מקדמה בסך 30% מסכום השהייה. יתרת התשלום נגבית ביום הצ׳ק־אין או בתיאום מראש. אישור ההזמנה, קוד הכניסה והוראות ההגעה נשלחים לאורח בוואטסאפ/מייל — אספקת השירות היא האירוח עצמו במועדים שנבחרו, ואינה כרוכה במשלוח פיזי.</p>'
   +H('מדיניות ביטולים')
   +'<p>ביטול עד 7 ימים לפני הצ׳ק־אין — החזר מלא של המקדמה. ביטול 2–7 ימים לפני — חיוב 50% מהמקדמה. ביטול ביום הצ׳ק־אין או אי־הגעה — חיוב מלא. בעונות שיא (חגי תשרי, פסח, יולי–אוגוסט) — ביטול חינם עד 14 ימים לפני ההגעה. כל זאת בכפוף להוראות חוק הגנת הצרכן, התשמ״א־1981 ותקנותיו.</p>'
   +H('צ׳ק־אין, צ׳ק־אאוט וכללי המקום')
   +'<p>צ׳ק־אין מהשעה 15:00, צ׳ק־אאוט עד 11:00; שעות אחרות באישור מראש בלבד. העישון אסור בתוך היחידות. שעות שקט: 23:00–7:00. האירוח מותר למספר האורחים שצוין בהזמנה בלבד.</p>'
   +H('מדיניות אחריות')
-  +'<p>אנו מתחייבים למסור את הנכס נקי, תקין ותואם לתיאור ולתמונות שבאתר. בכל תקלה במהלך השהייה — צוות כוכב הדרום זמין בוואטסאפ ויפעל לתיקון בהקדם. האורח אחראי לכל נזק שייגרם לסוויטה או לציוד במהלך השהייה; במקרה של נזק יחויב האורח לפי עלות התיקון או ההחלפה.</p>'
+  +'<p>אנו מתחייבים למסור את הנכס נקי, תקין ותואם לתיאור ולתמונות שבאתר. בכל תקלה במהלך השהייה — צוות לומי זמין בוואטסאפ ויפעל לתיקון בהקדם. האורח אחראי לכל נזק שייגרם לסוויטה או לציוד במהלך השהייה; במקרה של נזק יחויב האורח לפי עלות התיקון או ההחלפה.</p>'
   +H('פרטיות וסליקה')
   +'<p>פרטי התשלום אינם נשמרים אצלנו ומועברים ישירות לחברת הסליקה במערכת מאובטחת ומוצפנת. <b>אנו מתחייבים לא להעביר את פרטי האשראי של הלקוח לצד ג׳.</b> למדיניות הפרטיות המלאה: <a class="ulink" href="#/privacy">מדיניות פרטיות</a>.</p>'
   +'<p style="color:var(--gray);font-size:14px">עודכן לאחרונה: ספטמבר 2026.</p>');
@@ -1162,7 +1174,7 @@ views.terms=function(){
 views.privacy=function(){
   const H=t=>'<h2 style="font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.14em;color:var(--ink);margin-top:14px">'+t+'</h2>';
   return pageShell('מדיניות פרטיות',
-   '<p>אנחנו, סוויטות כוכב הדרום בע״מ (להלן: "כוכב הדרום"), מכבדים את פרטיות המשתמשים באתר ובשירותים שלנו. מסמך זה מסביר אילו נתונים נאספים, כיצד נעשה בהם שימוש, ואיך ניתן לבקש עיון או מחיקה.</p>'
+   '<p>אנחנו, סוויטות כוכב הדרום בע״מ (להלן: "לומי אילת"), מכבדים את פרטיות המשתמשים באתר ובשירותים שלנו. מסמך זה מסביר אילו נתונים נאספים, כיצד נעשה בהם שימוש, ואיך ניתן לבקש עיון או מחיקה.</p>'
   +H('איזה מידע אנחנו אוספים')
   +'<p>פרטים שתמסרו בטופס יצירת קשר: שם, טלפון ותוכן הפנייה. נתוני שימוש באתר לצורך שיפור החוויה. בעת הזמנה: פרטי התשלום אינם נשמרים אצלנו — הם מועברים ישירות לחברת הסליקה במערכת מאובטחת.</p>'
   +H('אבטחת פרטי תשלום')
@@ -1173,7 +1185,7 @@ views.privacy=function(){
   +'<p>על פי חוק הגנת הפרטיות, התשמ״א־1981, אתם זכאים לעיין במידע השמור עליכם, לבקש לתקנו או למחוק אותו. שלחו בקשה ל־<a class="ulink" href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a> ונשיב תוך 14 ימים.</p>'
   +H('עוגיות')
   +'<p>האתר משתמש בעוגיות לשמירת העדפות (למשל הגדרות נגישות) ולניתוח שימוש. ניתן להגביל עוגיות בהגדרות הדפדפן; השבתה מלאה עלולה לפגוע בחלק מתפקודי האתר.</p>'
-  +'<p style="color:var(--gray);font-size:14px">סוויטות כוכב הדרום בע״מ · אילת, ישראל · עודכן: ספטמבר 2026.</p>');
+  +'<p style="color:var(--gray);font-size:14px">לומי אילת · סוויטות כוכב הדרום בע״מ · אילת, ישראל · עודכן: ספטמבר 2026.</p>');
 };
 
 /* ---------- router ---------- */
@@ -1184,7 +1196,7 @@ function updateSeo(r){
     const p=findPlace(r.arg);
     desc=p.short+' '+p.loc+' הזמנה ישירה, החל מ־'+p.price+' ללילה.';
     ld={'@context':'https://schema.org','@graph':[
-      {'@type':p.kind==='hotel'?'Hotel':'VacationRental','name':p.name+' · כוכב הדרום אילת','description':p.long,
+      {'@type':p.kind==='hotel'?'Hotel':'VacationRental','name':p.name+' · לומי אילת','description':p.long,
        'image':p.gallery.slice(0,6),
        'address':{'@type':'PostalAddress','addressLocality':'אילת','addressCountry':'IL'},
        'geo':{'@type':'GeoCoordinates','latitude':29.5577,'longitude':34.9519},
@@ -1198,7 +1210,7 @@ function updateSeo(r){
         {'@type':'ListItem','position':2,'name':'הנכסים'},
         {'@type':'ListItem','position':3,'name':p.name}]}
     ]};
-  }else{desc='קולקציה של שבעה נכסי אירוח יוקרתיים באילת: וילה עם בריכה פרטית, סוויטות עם ג׳קוזי ומלון בוטיק. הזמנה ישירה, בלי עמלות.'}
+  }else{desc='לומי אילת: קולקציה פרטית של שבעה נכסי יוקרה באילת. וילה עם בריכה פרטית, סוויטות עם ג׳קוזי ומלון בוטיק. הזמנה ישירה, בלי עמלות.'}
   if(meta&&desc)meta.setAttribute('content',desc);
   let el=document.getElementById('ld-place');
   if(ld){if(!el){el=document.createElement('script');el.type='application/ld+json';el.id='ld-place';document.head.appendChild(el)}el.textContent=JSON.stringify(ld)}
@@ -1218,14 +1230,14 @@ function render(){
   const main=$('#main');
   if(keepDom){
     if(r.page==='place')document.body.classList.add('has-mbar');
-    document.title=({home:'כוכב הדרום · סוויטות ובתי נופש באילת | הזמנה ישירה',
-      places:'הנכסים שלנו · כוכב הדרום אילת',
-      place:findPlace(r.arg).name+' · כוכב הדרום אילת',
-      reviews:'ביקורות אורחים · כוכב הדרום אילת',
-      contact:'יצירת קשר · כוכב הדרום אילת'})[r.page]||document.title;
+    document.title=({home:'לומי אילת · Lumi Eilat | קולקציה פרטית של נכסי יוקרה',
+      places:'הנכסים שלנו · לומי אילת',
+      place:findPlace(r.arg).name+' · לומי אילת',
+      reviews:'ביקורות אורחים · לומי אילת',
+      contact:'יצירת קשר · לומי אילת'})[r.page]||document.title;
     updateSeo(r);
     wirePage();initReveals();initPlx();refreshBookLinks();activateOdo();initGridAuto();initScenes();onScrollFrame();
-    if(r.page==='home'){window.__cfDelay=700;cfInit();initLiquidHero()}
+    if(r.page==='home'){window.__cfDelay=700;cfInit()}
     return;
   }
   if(r.page==='home'||r.page===''){main.innerHTML=views.home()}
@@ -1233,11 +1245,11 @@ function render(){
   else if(r.page==='place'){main.innerHTML=views.place(r.arg)}
   else if(views[r.page]){main.innerHTML=views[r.page]()}
   else{main.innerHTML=pageShell('העמוד לא נמצא','<p>הקישור שהגעתם אליו כבר לא קיים, אבל הבתים עדיין כאן.</p><p><a class="ulink" href="#/places">לכל הנכסים</a></p>')}
-  document.title=({home:'כוכב הדרום · סוויטות ובתי נופש באילת | הזמנה ישירה',
-    places:'הנכסים שלנו · כוכב הדרום אילת',
-    place:findPlace(r.arg).name+' · כוכב הדרום אילת',
-    reviews:'ביקורות אורחים · כוכב הדרום אילת',
-    contact:'יצירת קשר · כוכב הדרום אילת'})[r.page]||'כוכב הדרום · אילת';
+  document.title=({home:'לומי אילת · Lumi Eilat | קולקציה פרטית של נכסי יוקרה',
+    places:'הנכסים שלנו · לומי אילת',
+    place:findPlace(r.arg).name+' · לומי אילת',
+    reviews:'ביקורות אורחים · לומי אילת',
+    contact:'יצירת קשר · לומי אילת'})[r.page]||'לומי אילת · Lumi Eilat';
   updateSeo(r);
   wirePage();
   initReveals();
@@ -1252,7 +1264,6 @@ function render(){
     setTimeout(()=>{const hc=$('#hero-c');if(hc)hc.classList.add('hero-ready')},first?1400:60);
     window.__cfDelay=first?2100:700;
     cfInit();
-    initLiquidHero();
   }
 }
 addEventListener('hashchange',()=>{
@@ -1272,6 +1283,8 @@ function wirePage(){
       refreshBookLinks();
     });
   });
+  const bp=$('#bb-p');
+  if(bp&&!bp.__wired){bp.__wired=true;bp.addEventListener('change',()=>{state.place=bp.value;$$('#bookbar a[data-bookid]').forEach(a=>{a.dataset.bookid=bp.value});refreshBookLinks()})}
   const cForm=$('#c-form');
   if(cForm){
     const upd=()=>{
@@ -1725,113 +1738,6 @@ $('#a11y-panel .a-close').addEventListener('click',()=>{a11yPanel.classList.remo
 
 /* ---------- WebGL: עזרים ---------- */
 const GL_VS='attribute vec2 aP;varying vec2 vUv;void main(){vUv=aP*0.5+0.5;gl_Position=vec4(aP,0.0,1.0);}';
-function glMake(canvas){
-  const gl=canvas.getContext('webgl',{alpha:false,antialias:false});
-  if(!gl)return null;
-  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
-  return gl;
-}
-function glProg(gl,fs){
-  function sh(t,src){const o=gl.createShader(t);gl.shaderSource(o,src);gl.compileShader(o);
-    if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))return null;return o}
-  const v=sh(gl.VERTEX_SHADER,GL_VS),f=sh(gl.FRAGMENT_SHADER,fs);
-  if(!v||!f)return null;
-  const pr=gl.createProgram();gl.attachShader(pr,v);gl.attachShader(pr,f);gl.linkProgram(pr);
-  if(!gl.getProgramParameter(pr,gl.LINK_STATUS))return null;
-  gl.useProgram(pr);
-  const loc=gl.getAttribLocation(pr,'aP');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-  return pr;
-}
-function glTex(gl,img){
-  try{
-    const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);
-    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,1);
-    gl.texImage2D(gl.TEXTURE_2D,0,gl.RGB,gl.RGB,gl.UNSIGNED_BYTE,img);
-    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);
-    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);
-    gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
-    return t;
-  }catch(e){return null}
-}
-function loadTexImage(src){
-  return new Promise(res=>{
-    const im=new Image();
-    im.crossOrigin='anonymous';
-    im.onload=()=>res(im);
-    im.onerror=()=>res(null);
-    im.src=src;
-  });
-}
-function coverUv(cw,ch,iw,ih){
-  const ca=cw/ch,ia=iw/ih;
-  if(ca>ia)return [1,ia/ca,0,(1-ia/ca)/2];
-  return [ca/ia,1,(1-ca/ia)/2,0];
-}
-/* ---------- הירו הנוזלי ---------- */
-const LIQ_FS='precision mediump float;varying vec2 vUv;uniform sampler2D uT;uniform float uTime;uniform vec4 uFit;uniform vec4 uR[8];'
-+'void main(){vec2 uv=vUv;float g=0.0;'
-+'for(int i=0;i<8;i++){float age=uTime-uR[i].z;'
-+'if(uR[i].w>0.001&&age>0.0&&age<2.2){vec2 d=uv-uR[i].xy;float ds=length(d)+0.00001;'
-+'float w=sin(ds*46.0-age*6.5)*exp(-ds*14.0)*exp(-age*2.0)*uR[i].w;uv+=(d/ds)*w*0.014;g+=w;}}'
-+'uv.x+=sin(uv.y*12.0+uTime*0.5)*0.0016;uv.y+=cos(uv.x*10.0+uTime*0.42)*0.0013;'
-+'float z=1.0+min(0.22,uTime*0.014);vec2 cuv=(uv-0.5)/z+0.5;'
-+'vec2 tuv=cuv*uFit.xy+uFit.zw;vec3 c=texture2D(uT,tuv).rgb;c+=g*0.38;'
-+'gl_FragColor=vec4(c,1.0);}';
-function initLiquidHero(){
-  const layer=$('#hero-layer');if(!layer||motionOff())return;
-  if(layer.__liq)return;layer.__liq=true;
-  const oldCv=layer.querySelector('#hero-gl');
-  if(oldCv)oldCv.remove();
-  layer.classList.remove('gl-on');
-  const img=layer.querySelector('img');if(!img)return;
-  const boot=async()=>{
-    const tim=await loadTexImage(img.currentSrc||img.src);
-    if(!tim)return;
-    const cv=document.createElement('canvas');cv.id='hero-gl';
-    const gl=glMake(cv);if(!gl)return;
-    const pr=glProg(gl,LIQ_FS);if(!pr)return;
-    const tex=glTex(gl,tim);if(!tex)return;
-    layer.appendChild(cv);layer.classList.add('gl-on');
-    const uT=gl.getUniformLocation(pr,'uTime'),uF=gl.getUniformLocation(pr,'uFit');
-    const uR=[];for(let i=0;i<8;i++)uR.push(gl.getUniformLocation(pr,'uR['+i+']'));
-    const rip=new Array(8).fill(0).map(()=>[0,0,-9,0]);let ri=0;
-    const dpr=Math.min(devicePixelRatio||1,1.6);
-    function size(){
-      const r=layer.getBoundingClientRect();
-      cv.width=Math.round(r.width*dpr);cv.height=Math.round(r.height*dpr);
-      gl.viewport(0,0,cv.width,cv.height);
-      gl.uniform4fv(uF,coverUv(r.width,r.height,tim.naturalWidth,tim.naturalHeight));
-    }
-    size();addEventListener('resize',size);
-    let t0=performance.now();
-    function addRip(x,y,w){rip[ri]=[x,y,(performance.now()-t0)/1000,w];ri=(ri+1)%8}
-    const hero=$('#hero-strip');
-    let lastAdd=0;
-    hero.addEventListener('pointermove',e=>{
-      const n=performance.now();if(n-lastAdd<70)return;lastAdd=n;
-      const r=layer.getBoundingClientRect();
-      addRip((e.clientX-r.left)/r.width,1-(e.clientY-r.top)/r.height,0.6);
-    },{passive:true});
-    hero.addEventListener('pointerdown',e=>{
-      const r=layer.getBoundingClientRect();
-      addRip((e.clientX-r.left)/r.width,1-(e.clientY-r.top)/r.height,1.4);
-    },{passive:true});
-    let autoT=0;
-    (function frame(){
-      if(!document.getElementById('hero-gl'))return;
-      const t=(performance.now()-t0)/1000;
-      if(scrollY<innerHeight&&!document.hidden&&!motionOff()){
-        if(t-autoT>2.8){autoT=t;addRip(0.15+Math.random()*0.7,0.2+Math.random()*0.5,0.35)}
-        gl.uniform1f(uT,t);
-        for(let i=0;i<8;i++)gl.uniform4fv(uR[i],rip[i]);
-        gl.drawArrays(gl.TRIANGLES,0,3);
-      }
-      requestAnimationFrame(frame);
-    })();
-  };
-  if(img.complete&&img.naturalWidth)boot();else img.addEventListener('load',boot,{once:true});
-}
 /* ---------- שער אישור תקנון לפני תשלום ---------- */
 const tgate=$('#tgate');
 function tgateAccepted(){try{return sessionStorage.getItem('kd-terms-ok')==='1'}catch(e){return window.__tok===true}}
@@ -1865,8 +1771,8 @@ tgate.addEventListener('click',e=>{if(e.target===tgate)tgateClose()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&tgate.classList.contains('open'))tgateClose()});
 /* ---------- boot ---------- */
 $('#skip-link').addEventListener('click',e=>{e.preventDefault();$('#main').focus();$('#main').scrollIntoView()});
-$('#wa-fab').href=wa('שלום, התעניינתי בכוכב הדרום');
-$('#f-wa').href=wa('שלום, התעניינתי בכוכב הדרום');
+$('#wa-fab').href=wa('שלום, התעניינתי בלומי אילת');
+$('#f-wa').href=wa('שלום, התעניינתי בלומי אילת');
 $('#f-places').innerHTML=PLACES.map(p=>'<a href="#/place/'+p.id+'">'+p.name+'</a>').join('');
 applyA11y();
 render();
@@ -1877,13 +1783,8 @@ render();
   setTimeout(()=>{i.classList.add('done')},300);
   setTimeout(()=>{i.remove()},1400);
 })();
-/* מגנטיות לכפתורים + הילת זהב */
+/* מגנטיות לכפתורים */
 if(matchMedia('(hover:hover) and (pointer:fine)').matches){
-  const glow=$('#glow');
-  document.addEventListener('mousemove',e=>{
-    glow.style.transform='translate('+(e.clientX-180)+'px,'+(e.clientY-180)+'px)';
-    document.body.classList.toggle('glow-on',!!e.target.closest('.qband,.hero,.phero,#lightbox'));
-  },{passive:true});
   document.addEventListener('mouseover',e=>{
     const b=e.target.closest('.btn');
     if(!b||b.__mag)return;b.__mag=true;
