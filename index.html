@@ -269,6 +269,11 @@ html[data-motion="off"] .hero .layer img{animation:none}
 .bookcard .btn{width:100%;margin-top:8px}
 .bookcard .btn-ghost{width:100%;margin-top:10px}
 .bookcard .note{font-size:12px;color:var(--gray);text-align:center;margin-top:14px;letter-spacing:.03em}
+.bookcard .pnote{display:block;font-size:12.5px;color:var(--gray);letter-spacing:.04em;margin-top:6px}
+.notes{margin-top:18px;padding:16px 20px;border:1px solid var(--hair);background:rgba(26,25,22,.025)}
+.notes b{display:block;font-size:11px;letter-spacing:.16em;color:var(--gray);font-weight:600;margin-bottom:8px}
+.notes ul{margin:0;padding-inline-start:18px}
+.notes li{margin:4px 0}
 .mobile-book{display:none}
 
 /* light typographic finale */
@@ -730,6 +735,9 @@ html[data-contrast="on"] .hero-shade,html[data-contrast="on"] .qshade{background
 <script>
 'use strict';
 /* ---------- data ---------- */
+/* בסיס לקבצים מקומיים (img/): ב-SPA התיקייה של המסמך, בעמודים המרונדרים (dist) שורש הדומיין */
+const ROOT=window.__BUILD_ROOT||(window.__PRERENDERED!==undefined?'/':location.pathname.replace(/[^/]*$/,''));
+const IMG=ROOT+'img/';
 const U='https://www.kohav-d.co.il/wp-content/uploads/';
 const seq=(pre,from,to)=>{const a=[];for(let i=from;i<=to;i++)a.push(U+pre+String(i).padStart(2,'0')+'.jpg');return a};
 const G=(pre,nums)=>nums.map(n=>U+pre+String(n).padStart(2,'0')+'.jpg');
@@ -744,14 +752,16 @@ const PLACES=[
   amenities:['בריכת שחייה פרטית','3 חדרי שינה · 2 חדרי רחצה','גינה, טרסה ופינת ברביקיו','מטבח מאובזר מלא','מכונת כביסה','מיזוג בכל חדר','Wi-Fi מהיר','נגיש לכיסא גלגלים'],
   loc:'הוילה שוכנת בשכונת ראמים השקטה של אילת: פרטיות מלאה, בלי שכנים, ונסיעה קצרה מהחוף, מהטיילת וממוקדי הבילוי של העיר.',locFacts:['שכונת ראמים','נסיעה קצרה מהחוף','דקות ממרכז העיר'],
   gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/v1784654383/pms/properties/57fba550-c164-4128-bc42-b7076f588065/adb41fc5.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654384/pms/properties/57fba550-c164-4128-bc42-b7076f588065/02f87d28.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654392/pms/properties/57fba550-c164-4128-bc42-b7076f588065/fa5f8da9.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654393/pms/properties/57fba550-c164-4128-bc42-b7076f588065/cb8a23f2.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654385/pms/properties/57fba550-c164-4128-bc42-b7076f588065/5c4df035.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654386/pms/properties/57fba550-c164-4128-bc42-b7076f588065/13346247.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654388/pms/properties/57fba550-c164-4128-bc42-b7076f588065/ad1431e3.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654395/pms/properties/57fba550-c164-4128-bc42-b7076f588065/2f42a474.jpg']},
- {id:'hazricha',name:'כוכב הזריחה',nameEn:'SUNRISE STAR',tag:'מתחם משפחתי',kind:'family',pid:'c1f1f3f4-b435-4276-9f2b-c7829c085c76',price:'₪1,200',
-  cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg',alt:'ג׳קוזי על גג מתחם כוכב הזריחה מול המפרץ',
-  short:'ארבע סוויטות נופש עם ג׳קוזי פרטי בכל אחת, בריכת זרמים מחוממת ופינת מנגל, מול ההרים האדומים.',
-  long:'בין הים למרכז אילת, מוקף בנופי ההרים האדומים, שוכן מתחם כוכב הזריחה. ארבע סוויטות מעוצבות בקו מודרני, כל אחת עם מטבחון מאובזר, מרפסת פרטית וג׳קוזי מפנק. בלב המתחם: בריכת זרמים מחוממת ופינת מנגל.',
-  meta:'4 סוויטות · ג׳קוזי בכל סוויטה · בריכת זרמים מחוממת',
-  amenities:['ג׳קוזי פרטי בכל סוויטה','בריכת זרמים מחוממת','פינת מנגל וברביקיו','מטבחון מאובזר','מרפסת פרטית','מיזוג','Wi-Fi חינם','טלוויזיה חכמה'],
-  loc:'המתחם יושב בין הים למרכז אילת, מוקף בנופי ההרים האדומים: דקות ספורות מחוף אלמוג, וקרוב לכל מה שהעיר מציעה.',locFacts:['בין הים למרכז','דקות מחוף אלמוג','נוף להרים האדומים'],
-  gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/b6690fd9.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654477/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/98c3bd51.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/59fd709a.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654476/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/30dc1d46.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654482/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/6146ade5.jpg']},
+ {id:'hazricha',name:'כוכב הזריחה',nameEn:'SUNRISE STAR',tag:'סוויטה זוגית · קומת גג',kind:'couple',pid:'c1f1f3f4-b435-4276-9f2b-c7829c085c76',price:'₪950',priceNote:'סופי שבוע החל מ־₪1,200',
+  cover:IMG+'hazricha/01.webp',alt:'הג׳קוזי הפרטי במרפסת הגג של כוכב הזריחה מול מפרץ אילת',
+  short:'סוויטה זוגית בקומת גג עם נוף פנורמי של הים והעיר אילת. ג׳קוזי פרטי במרפסת, מטבח חוץ מאובזר ובריכה חיצונית.',
+  long:'בקומת הגג, עם המפרץ והעיר פרושים מתחת: סוויטה זוגית עם מרפסת פרטית וג׳קוזי משלכם, מטבח חוץ מאובזר עם מקרר גדול ומקפיא, ובריכה חיצונית עם מיטות שיזוף. בפנים: מיטה זוגית, ספה נפתחת למיטה, טלוויזיה חכמה עם אפליקציות, Wi-Fi מהיר ומיזוג. הכניסה לסוויטה פרטית.',
+  meta:'סוויטה זוגית · קומת גג · עד 3 אורחים · ג׳קוזי פרטי · נוף פנורמי',
+  amenities:['מרפסת פרטית עם נוף פנורמי','ג׳קוזי פרטי','מטבח חוץ מאובזר · מקרר גדול ומקפיא','בריכה חיצונית עם מיטות שיזוף','Wi-Fi מהיר','טלוויזיה חכמה עם אפליקציות','ספה נפתחת למיטה','מיזוג','גישה פרטית'],
+  rules:[{k:'צ׳ק־אין',v:'מ־15:00'},{k:'צ׳ק־אאוט',v:'עד 11:00'},{k:'עישון',v:'אסור בפנים'},{k:'שעות שקטות',v:'בכל שעות היממה'},{k:'גיל מינימלי',v:'18 להזמנה'}],
+  notes:['אסור להבעיר אש ביחידה ובמרפסת, כולל מנגל.','הגישה ליחידה עם מדרגות.'],
+  loc:'הסוויטה יושבת בקומת הגג והמרפסת פונה אל המפרץ: הים, ההרים האדומים והעיר אילת בתמונה אחת, מהבוקר ועד אורות הלילה.',locFacts:['קומת גג','נוף פנורמי לים ולעיר','מרפסת פרטית עם ג׳קוזי'],
+  gallery:[IMG+'hazricha/01.webp',IMG+'hazricha/02.webp',IMG+'hazricha/03.webp',IMG+'hazricha/04.webp',IMG+'hazricha/05.webp',IMG+'hazricha/06.webp',IMG+'hazricha/07.webp','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/b6690fd9.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654472/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/97adf8a7.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654477/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/98c3bd51.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1784654473/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/59fd709a.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654476/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/30dc1d46.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1784654482/pms/properties/c1f1f3f4-b435-4276-9f2b-c7829c085c76/6146ade5.jpg']},
  {id:'hayam',name:'כוכב הים',nameEn:'SEA STAR',tag:'דירות נוף לים',kind:'family',pid:'80eda529-c8eb-45b6-bc5b-e816bbbd163b',price:'₪1,500',
   cover:'https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785344000/pms/properties/80eda529-c8eb-45b6-bc5b-e816bbbd163b/dcc51076.jpg',alt:'בניין כוכב הים בשדרות התמרים',
   short:'ארבע דירות מודרניות בשדרות התמרים, שלוש עם נוף ישיר לים, 8 דקות הליכה למרינה.',
@@ -793,8 +803,8 @@ const PLACES=[
   loc:'המלון ממוקם במרכז העיר אילת, נקודת פתיחה מושלמת לחופשה עירונית: קרוב לחופים, לטיילת ולמתחמי הקניות.',locFacts:['מרכז העיר','קרוב לחופים','מתאים לקבוצות'],
   gallery:['https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732700/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/ffebbd6d.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732701/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/fd12e34b.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732700/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/2ad53213.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/f_auto,q_auto,w_1600/v1785732701/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/c470e3e1.jpg','https://res.cloudinary.com/dsaflsezn/image/upload/v1785732703/pms/properties/aeb53bcf-78f3-4efc-8e06-52ccb42111ef/f6da9286.jpg']}
 ];
-const WOW1='img/hero-l.webp'; /* 2560px, מקודד מ-Eilat_Coral_Reserve.jpg (Wikimedia Commons, CC BY) — היה 4.75MB */
-const WOW1P='img/hero-p.webp'; /* חיתוך אנכי 1080px לנייד */
+const WOW1=IMG+'hero-l.webp'; /* 2560px, מקודד מ-Eilat_Coral_Reserve.jpg (Wikimedia Commons, CC BY) — היה 4.75MB */
+const WOW1P=IMG+'hero-p.webp'; /* חיתוך אנכי 1080px לנייד */
 const WOW2='https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Eilat_at_night.jpg/1920px-Eilat_at_night.jpg';
 const WOW3='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Eilat_Coastline_At_Night.jpg/1920px-Eilat_Coastline_At_Night.jpg';
 const HERO=[WOW1,WOW2,U+'2026/06/kochav-halayla-02.jpg',U+'2026/06/kochav-hamidbar-05.jpg',U+'2026/06/kochav-hazricha-22.jpg'];
@@ -870,6 +880,7 @@ function faqFor(p){
    {q:'איך מזמינים את '+p.name+'?',a:'ההזמנה ישירה מולנו במערכת מאובטחת: בוחרים תאריכים, רואים מחיר סופי ומשלמים אונליין. בלי עמלות פלטפורמה, החל מ־'+p.price+' ללילה.'},
    {q:'לכמה אורחים הנכס מתאים?',a:p.meta+'.'},
    {q:'מה מקבלים באירוח?',a:p.amenities.join(', ')+'.'},
+   ...(p.notes?[{q:'יש משהו חשוב לדעת לפני ההגעה ל'+p.name+'?',a:p.notes.join(' ')+(p.rules?' '+p.rules.map(r=>r.k+': '+r.v).join(' · ')+'.':'')}]:[]),
    {q:'איפה '+p.name+' נמצא?',a:p.loc}
   ];
 }
@@ -1035,10 +1046,11 @@ views.place=function(id){
    +'<h2 class="subh" data-rv>מה כלול בנכס</h2>'
    +'<ul class="amen">'+p.amenities.map((a,i)=>'<li data-rv style="--d:'+(i*45)+'ms">'+a+'</li>').join('')+'</ul>'
    +'<h2 class="subh" data-rv style="margin-bottom:12px">כללי הבית</h2>'
-   +'<div class="rules" data-rv>'+RULES.map(r=>'<div class="rule"><b>'+r.k+'</b>'+r.v+'</div>').join('')+'</div>'
+   +'<div class="rules" data-rv>'+(p.rules||RULES).map(r=>'<div class="rule"><b>'+r.k+'</b>'+r.v+'</div>').join('')+'</div>'
+   +(p.notes?'<div class="notes" data-rv><b>חשוב לדעת</b><ul>'+p.notes.map(n=>'<li>'+n+'</li>').join('')+'</ul></div>':'')
    +'</div>'
    +'<aside><div class="bookcard" aria-label="הזמנת '+p.name+'">'
-   +'<div class="price"><small>החל מ־</small><b>'+odo(p.price)+'</b><small> / לילה</small></div>'
+   +'<div class="price"><small>החל מ־</small><b>'+odo(p.price)+'</b><small> / לילה</small>'+(p.priceNote?'<span class="pnote">'+p.priceNote+'</span>':'')+'</div>'
    +'<div class="bfield"><label for="pl-in">תאריך הגעה</label><input type="date" id="pl-in" data-bk="checkIn" value="'+state.checkIn+'"></div>'
    +'<div class="bfield"><label for="pl-out">תאריך יציאה</label><input type="date" id="pl-out" data-bk="checkOut" value="'+state.checkOut+'"></div>'
    +'<div class="bfield"><label for="pl-g">אורחים</label><select id="pl-g" data-bk="guests">'
