@@ -428,19 +428,21 @@ form.cform{background:#fff;border:1px solid var(--hair);padding:clamp(22px,2.5vw
 .cform .btn{width:100%}
 
 /* footer */
-footer.site{border-top:1px solid var(--hair);margin-top:clamp(70px,9vw,130px);padding-block:clamp(48px,6vw,80px);text-align:center;background:var(--bg)}
-.f-logo .brand-name{font-size:19px}
-.f-nav{display:flex;gap:8px 30px;justify-content:center;flex-wrap:wrap;margin-top:28px}
-.f-nav a{color:var(--soft);font-weight:600;font-size:13px;letter-spacing:.12em}
-.f-nav a:hover{color:var(--ink)}
-.f-contact{margin-top:18px;color:var(--gray);font-size:14px;display:flex;gap:8px 22px;justify-content:center;flex-wrap:wrap}
-.f-contact a{color:var(--soft);font-weight:600}
-.f-legal{margin-top:16px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.f-legal a{color:var(--gray);font-size:12.5px;letter-spacing:.06em}
-.f-copy{margin-top:20px;color:var(--gray);font-size:12.5px;letter-spacing:.04em}
-.f-credit{margin-top:10px}
+footer.site{border-top:1px solid var(--hair);margin-top:clamp(70px,9vw,130px);padding:clamp(48px,6vw,72px) 0 104px;background:var(--bg);text-align:start}
+.f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px clamp(24px,4vw,64px);align-items:start}
+.f-logo{display:inline-block;text-align:start}
+.f-logo .brand-name{font-size:19px;text-indent:0}
+.f-logo .brand-en{text-indent:0}
+.f-tag{margin:16px 0 0;max-width:30ch;color:var(--gray);font-size:14px;line-height:1.75}
+.f-col h4{margin:0 0 14px;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--gray)}
+.f-col a{display:block;color:var(--soft);font-size:14.5px;line-height:1.55;padding:3px 0;font-weight:500;transition:color .25s ease}
+.f-col a:hover{color:var(--gold)}
+.f-bottom{margin-top:clamp(36px,5vw,56px);padding-top:22px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;gap:10px 28px;flex-wrap:wrap;color:var(--gray);font-size:12.5px;letter-spacing:.03em}
+.f-bottom p{margin:0}
 .f-credit a{color:var(--ink);font-weight:600;letter-spacing:.06em;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:1px;transition:color .3s ease}
 .f-credit a:hover{color:var(--gold)}
+@media (max-width:900px){.f-grid{grid-template-columns:1fr 1fr 1fr}.f-brand{grid-column:1/-1}}
+@media (max-width:600px){footer.site{padding-bottom:96px}.f-grid{grid-template-columns:1fr 1fr;gap:30px 20px}.f-brand{grid-column:1/-1;text-align:center}.f-logo{text-align:center}.f-logo .brand-name{text-indent:.3em}.f-tag{margin-inline:auto}.f-places-col{grid-row:span 2}.f-bottom{flex-direction:column;align-items:center;text-align:center;gap:8px}}
 
 /* floating buttons */
 .fab{position:fixed;bottom:18px;z-index:115;width:52px;height:52px;border-radius:99px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(20,19,16,.18);transition:transform .15s var(--eo)}
@@ -677,26 +679,33 @@ html[data-contrast="on"] .hero-shade,html[data-contrast="on"] .qshade{background
 <main id="main" tabindex="-1"></main>
 
 <footer class="site">
-  <div class="wrap">
-    <a class="brand f-logo" href="#/" aria-label="לומי אילת, לעמוד הבית">
-      <span class="brand-name">LUMI</span>
-      <span class="brand-en">EILAT&nbsp;·&nbsp;PRIVATE&nbsp;COLLECTION</span>
-    </a>
-    <nav class="f-nav" aria-label="הנכסים" id="f-places"></nav>
-    <div class="f-contact">
-      <a href="tel:+972523724764"><bdi dir="ltr">052-372-4764</bdi></a>
-      <a id="f-wa" href="#" target="_blank" rel="noopener">וואטסאפ 24/7</a>
-      <a href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a>
-      <a href="https://instagram.com/star_suits1" target="_blank" rel="noopener"><bdi dir="ltr">@star_suits1</bdi></a>
+  <div class="wrap f-grid">
+    <div class="f-brand">
+      <a class="brand f-logo" href="#/" aria-label="לומי אילת, לעמוד הבית">
+        <span class="brand-name">LUMI</span>
+        <span class="brand-en">EILAT&nbsp;·&nbsp;PRIVATE&nbsp;COLLECTION</span>
+      </a>
+      <p class="f-tag">קולקציה פרטית של נכסי יוקרה באילת. הזמנה ישירה, בלי עמלות פלטפורמה.</p>
     </div>
-    <nav class="f-legal" aria-label="מידע משפטי">
+    <nav class="f-col f-places-col" aria-label="הנכסים"><h4>הנכסים</h4><div id="f-places"></div></nav>
+    <div class="f-col"><h4>יצירת קשר</h4>
+      <a href="tel:+972523724764"><bdi dir="ltr">052-372-4764</bdi></a>
+      <a id="f-wa" href="#" target="_blank" rel="noopener">וואטסאפ</a>
+      <a href="mailto:info@kohav-d.co.il">info@kohav-d.co.il</a>
+      <a href="https://instagram.com/star_suits1" target="_blank" rel="noopener">אינסטגרם</a>
+    </div>
+    <nav class="f-col" aria-label="מידע"><h4>מידע</h4>
+      <a href="#/reviews">ביקורות אורחים</a>
+      <a href="#/contact">יצירת קשר</a>
       <a href="#/accessibility">הצהרת נגישות</a>
       <a href="#/terms">תנאי שימוש</a>
       <a href="#/privacy">מדיניות פרטיות</a>
     </nav>
-    <p class="f-copy">© 2026 לומי אילת · Lumi Eilat · מופעל על ידי סוויטות כוכב הדרום בע״מ · אילת, מדינת ישראל</p>
-    <p class="f-copy" style="font-size:11px;opacity:.75">צילומי נוף: Yonatan Dodin · Gal Gubesi · Wikimedia Commons (CC BY / CC BY-SA)</p>
-    <p class="f-copy f-credit">אתר נבנה על ידי <a href="https://thd.co.il" target="_blank" rel="noopener">THD Group</a></p>
+  </div>
+  <div class="wrap f-bottom">
+    <p>© 2026 לומי אילת · Lumi Eilat</p>
+    <p>מופעל על ידי סוויטות כוכב הדרום בע״מ, אילת</p>
+    <p class="f-credit">האתר נבנה על ידי <a href="https://thd.co.il" target="_blank" rel="noopener">THD Group</a></p>
   </div>
 </footer>
 
@@ -1173,6 +1182,7 @@ views.terms=function(){
   +'<p>אנו מתחייבים למסור את הנכס נקי, תקין ותואם לתיאור ולתמונות שבאתר. בכל תקלה במהלך השהייה — צוות לומי זמין בוואטסאפ ויפעל לתיקון בהקדם. האורח אחראי לכל נזק שייגרם לסוויטה או לציוד במהלך השהייה; במקרה של נזק יחויב האורח לפי עלות התיקון או ההחלפה.</p>'
   +H('פרטיות וסליקה')
   +'<p>פרטי התשלום אינם נשמרים אצלנו ומועברים ישירות לחברת הסליקה במערכת מאובטחת ומוצפנת. <b>אנו מתחייבים לא להעביר את פרטי האשראי של הלקוח לצד ג׳.</b> למדיניות הפרטיות המלאה: <a class="ulink" href="#/privacy">מדיניות פרטיות</a>.</p>'
+  +'<p style="color:var(--gray);font-size:13px">קרדיט צילומי נוף: Yonatan Dodin · Gal Gubesi · Wikimedia Commons (CC BY / CC BY-SA).</p>'
   +'<p style="color:var(--gray);font-size:14px">עודכן לאחרונה: ספטמבר 2026.</p>');
 };
 views.privacy=function(){
